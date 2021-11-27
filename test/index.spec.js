@@ -1,5 +1,4 @@
-// jest.mock('../src/zh-template-compiler')
-const { parse, SyntaxError } = require('../src/zh-template-compiler')
+const { parse } = require('../src/zh-template-compiler')
 
 describe('中文模板编译器', () => {
   test('不带属性的组件', () => {

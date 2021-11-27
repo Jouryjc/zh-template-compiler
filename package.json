@@ -9,6 +9,10 @@
   },
   "author": "",
   "license": "ISC",
+  "keywords": [
+    "compiler",
+    "template"
+  ],
   "devDependencies": {
     "pegjs": "^0.10.0"
   }
