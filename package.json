@@ -1,0 +1,15 @@
+{
+  "name": "zh-template-compiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/zh-template-compiler.js",
+  "scripts": {
+    "build-compiler": "npx pegjs -o zh-template-compiler.js src/zh-template-compiler.pegjs",
+    "test:watch": "npx jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pegjs": "^0.10.0"
+  }
+}

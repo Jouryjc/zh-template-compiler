@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`中文模板编译器 包含多个子组件 1`] = `
+Object {
+  "attrs": Array [],
+  "children": Array [
+    Object {
+      "attrs": Array [],
+      "children": Array [],
+      "name": "第一个子组件",
+      "type": "component",
+    },
+    Object {
+      "attrs": Array [],
+      "children": Array [],
+      "name": "第二个子组件",
+      "type": "component",
+    },
+  ],
+  "name": "组件",
+  "type": "component",
+}
+`;
+
+exports[`中文模板编译器 包含多层子组件 1`] = `
+Object {
+  "attrs": Array [],
+  "children": Array [
+    Object {
+      "attrs": Array [],
+      "children": Array [
+        Object {
+          "attrs": Array [],
+          "children": Array [],
+          "name": "孙子组件",
+          "type": "component",
+        },
+      ],
+      "name": "子组件",
+      "type": "component",
+    },
+  ],
+  "name": "组件",
+  "type": "component",
+}
+`;
+
+exports[`中文模板编译器 包含子组件 1`] = `
+Object {
+  "attrs": Array [],
+  "children": Array [
+    Object {
+      "attrs": Array [],
+      "children": Array [],
+      "name": "子组件",
+      "type": "component",
+    },
+  ],
+  "name": "组件",
+  "type": "component",
+}
+`;
+
+exports[`中文模板编译器 复杂的属性值 1`] = `
+Object {
+  "attrs": Array [
+    Object {
+      "isBind": false,
+      "key": "选中值",
+      "value": "番茄",
+    },
+    Object {
+      "isBind": true,
+      "key": "数据",
+      "value": Object {
+        "list": Array [
+          Object {
+            "id": "番茄",
+            "名称": "🍅",
+          },
+          Object {
+            "id": "香蕉",
+            "名称": "🍌",
+          },
+        ],
+        "total": 2,
+      },
+    },
+  ],
+  "children": Array [
+    Object {
+      "attrs": Array [],
+      "children": Array [],
+      "name": "子组件",
+      "type": "component",
+    },
+  ],
+  "name": "下拉框",
+  "type": "component",
+}
+`;
