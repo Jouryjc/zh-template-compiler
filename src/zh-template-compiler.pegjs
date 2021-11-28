@@ -7,9 +7,13 @@ Tag
  = ws
  start:StartTag
  children: (Tag*)
- EndTag
+ end:EndTag
  ws
  {
+   if (start.tag !== end.tag) {
+     throw Error('开始标签和结束标签不一致')
+   }
+   
    return {
      ...start,
      children
@@ -20,21 +24,21 @@ StartTag
  = "<"
    ws
    component:$zh
-   attrsList: (
+   attrList: (
    	 ws
      attrs:Attrs
      ws
      {
-       if (attrs.key) {
+       if (attrs.name) {
          return attrs
        }
      }
    )*
    ">" {
      return {
-       type: 'component',
-       name: component,
-       attrs: attrsList
+       type: 1,
+       tag: component,
+       attrs: attrList
      }
    }
    
@@ -42,6 +46,11 @@ EndTag
  = "</"
  component:$zh
  ">"
+ {
+   return {
+     tag: component
+   }
+ }
 
 zh = [\u4e00-\u9fa5]+
 
@@ -58,18 +67,11 @@ Attrs
      let hasVbind = isBind ? true : false
      return {
        isBind: hasVbind,
-       key: attrName,
+       name: attrName,
        value: attrValue
      }
    } 
  }
-
-LineTerminatorSequence "end of line"
-  = "\n"
-  / "\r\n"
-  / "\r"
-  / "\u2028"
-  / "\u2029"
   
 JSON_text
   = ws value:value ws { return value; }

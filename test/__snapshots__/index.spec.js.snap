@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`中文模板编译器 包含多个子组件 1`] = `
+exports[`zh-template-compiler 包含多个子组件 1`] = `
 Object {
   "attrs": Array [],
   "children": Array [
     Object {
       "attrs": Array [],
       "children": Array [],
-      "name": "第一个子组件",
-      "type": "component",
+      "tag": "第一个子组件",
+      "type": 1,
     },
     Object {
       "attrs": Array [],
       "children": Array [],
-      "name": "第二个子组件",
-      "type": "component",
+      "tag": "第二个子组件",
+      "type": 1,
     },
   ],
-  "name": "组件",
-  "type": "component",
+  "tag": "组件",
+  "type": 1,
 }
 `;
 
-exports[`中文模板编译器 包含多层子组件 1`] = `
+exports[`zh-template-compiler 包含多层子组件 1`] = `
 Object {
   "attrs": Array [],
   "children": Array [
@@ -32,46 +32,46 @@ Object {
         Object {
           "attrs": Array [],
           "children": Array [],
-          "name": "孙子组件",
-          "type": "component",
+          "tag": "孙子组件",
+          "type": 1,
         },
       ],
-      "name": "子组件",
-      "type": "component",
+      "tag": "子组件",
+      "type": 1,
     },
   ],
-  "name": "组件",
-  "type": "component",
+  "tag": "组件",
+  "type": 1,
 }
 `;
 
-exports[`中文模板编译器 包含子组件 1`] = `
+exports[`zh-template-compiler 包含子组件 1`] = `
 Object {
   "attrs": Array [],
   "children": Array [
     Object {
       "attrs": Array [],
       "children": Array [],
-      "name": "子组件",
-      "type": "component",
+      "tag": "子组件",
+      "type": 1,
     },
   ],
-  "name": "组件",
-  "type": "component",
+  "tag": "组件",
+  "type": 1,
 }
 `;
 
-exports[`中文模板编译器 复杂的属性值 1`] = `
+exports[`zh-template-compiler 复杂的属性值 1`] = `
 Object {
   "attrs": Array [
     Object {
       "isBind": false,
-      "key": "选中值",
+      "name": "选中值",
       "value": "番茄",
     },
     Object {
       "isBind": true,
-      "key": "数据",
+      "name": "数据",
       "value": Object {
         "list": Array [
           Object {
@@ -91,11 +91,11 @@ Object {
     Object {
       "attrs": Array [],
       "children": Array [],
-      "name": "子组件",
-      "type": "component",
+      "tag": "子组件",
+      "type": 1,
     },
   ],
-  "name": "下拉框",
-  "type": "component",
+  "tag": "下拉框",
+  "type": 1,
 }
 `;
