@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/zh-template-compiler.js",
   "scripts": {
-    "build-compiler": "npx pegjs -o zh-template-compiler.js src/zh-template-compiler.pegjs",
+    "build-compiler": "npx pegjs --format globals --export-var zhTemplateCompiler -o zh-template-compiler.js src/zh-template-compiler.pegjs",
     "test:watch": "npx jest --watchAll"
   },
   "author": "",
@@ -15,5 +15,11 @@
   ],
   "devDependencies": {
     "pegjs": "^0.10.0"
+  },
+  "dependencies": {
+    "@idux/cdk": "^1.0.0-alpha.1",
+    "@idux/components": "^1.0.0-alpha.1",
+    "mini-vue": "^1.0.1",
+    "vue": "^3.2.26"
   }
 }
