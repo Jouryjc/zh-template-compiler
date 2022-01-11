@@ -1,0 +1,101 @@
+// Vitest Snapshot v1
+
+exports[`zh-template-compiler > 包含多个子组件 1`] = `
+{
+  "attrs": [],
+  "children": [
+    {
+      "attrs": [],
+      "children": [],
+      "tag": "第一个子组件",
+      "type": 1,
+    },
+    {
+      "attrs": [],
+      "children": [],
+      "tag": "第二个子组件",
+      "type": 1,
+    },
+  ],
+  "tag": "组件",
+  "type": 1,
+}
+`;
+
+exports[`zh-template-compiler > 包含多层子组件 1`] = `
+{
+  "attrs": [],
+  "children": [
+    {
+      "attrs": [],
+      "children": [
+        {
+          "attrs": [],
+          "children": [],
+          "tag": "孙子组件",
+          "type": 1,
+        },
+      ],
+      "tag": "子组件",
+      "type": 1,
+    },
+  ],
+  "tag": "组件",
+  "type": 1,
+}
+`;
+
+exports[`zh-template-compiler > 包含子组件 1`] = `
+{
+  "attrs": [],
+  "children": [
+    {
+      "attrs": [],
+      "children": [],
+      "tag": "子组件",
+      "type": 1,
+    },
+  ],
+  "tag": "组件",
+  "type": 1,
+}
+`;
+
+exports[`zh-template-compiler > 复杂的属性值 1`] = `
+{
+  "attrs": [
+    {
+      "isBind": false,
+      "name": "选中值",
+      "value": "番茄",
+    },
+    {
+      "isBind": true,
+      "name": "数据",
+      "value": {
+        "list": [
+          {
+            "id": "番茄",
+            "名称": "🍅",
+          },
+          {
+            "id": "香蕉",
+            "名称": "🍌",
+          },
+        ],
+        "total": 2,
+      },
+    },
+  ],
+  "children": [
+    {
+      "attrs": [],
+      "children": [],
+      "tag": "子组件",
+      "type": 1,
+    },
+  ],
+  "tag": "下拉框",
+  "type": 1,
+}
+`;

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 const { parse } = require('../src/zh-template-compiler')
 
 describe('zh-template-compiler', () => {
