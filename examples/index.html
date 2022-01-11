@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zh-template-compiler</title>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+  <script src="./zh-template-compiler.js"></script>
+  <script src="../node_modules/vue/dist/vue.global.js"></script>
+  <script type="module">
+    // import { IxSelect } from '../node_modules/@idux/components/index.js'
+    // console.log(IxSelect)
+    const template = `
+      <下拉框 选中值="番茄" :数据="{
+        "list":[
+            {
+              "名称": "🍅",
+              "id": "番茄"
+            },
+            {
+              "名称": "🍌",
+              "id": "香蕉"
+            }
+        ],
+        "total": 2
+        }"></下拉框>
+      `;
+    const ast = zhTemplateCompiler.parse(template)
+    console.log(ast)
+
+    const { createApp, h } = Vue
+
+    const componentMap = {
+
+    }
+
+    const app = createApp({
+      render (_ctx) {
+        return h('select', {
+          value: _ctx.defaultVal,
+          "onUpdate:modelValue": $event => ((_ctx.defaultVal) = $event)
+        }, [
+          h('option', { id: '番茄' }, '🍅'),
+          h('option', { id: '香蕉' }, '🍌')
+        ])
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
