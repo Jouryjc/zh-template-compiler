@@ -6,7 +6,7 @@ Program
 Tag
  = ws
  start:StartTag
- children: (Tag*)
+ children: (Tag / zh:$zh)*
  end:EndTag
  ws
  {

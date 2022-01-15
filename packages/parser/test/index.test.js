@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-const { parse } = require('../src/zh-template-compiler')
+const { parse } = require('../dist/zh-template-compiler.cjs')
 
 describe('zh-template-compiler', () => {
   test('不带属性的组件', () => {

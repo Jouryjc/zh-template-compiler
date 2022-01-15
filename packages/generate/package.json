@@ -1,0 +1,33 @@
+{
+  "name": "zh-template-generate",
+  "version": "1.0.0",
+  "description": "generate",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "tsup": "tsup"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "dts": true,
+    "clean": true,
+    "format": [
+      "esm",
+      "cjs"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.64.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "tslib": "^2.3.1"
+  }
+}

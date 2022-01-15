@@ -1,22 +1,27 @@
 {
-  "name": "zh-template-compiler",
+  "name": "zh-template",
   "version": "1.0.0",
-  "description": "",
   "private": true,
-  "main": "src/zh-template-compiler.js",
   "scripts": {
-    "test": "pnpx vitest -c vite.config.ts -u"
+    "test": "pnpx vitest -c vite.config.ts -u",
+    "build": "pnpm build -r"
   },
   "author": "",
   "license": "ISC",
   "keywords": [
     "compiler",
-    "template"
+    "template",
+    "generate"
   ],
   "devDependencies": {
+    "@types/node": "^17.0.8",
     "pegjs": "^0.10.0",
+    "tsup": "^5.11.11",
     "typescript": "^4.5.4",
-    "vite": "^2.7.10",
+    "vite": "^2.7.12",
     "vitest": "^0.0.140"
+  },
+  "dependencies": {
+    "vue": "^3.2.26"
   }
 }

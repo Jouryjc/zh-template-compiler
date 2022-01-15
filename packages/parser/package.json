@@ -2,9 +2,12 @@
   "name": "zh-template-compiler",
   "version": "1.0.0",
   "description": "Chinese template compiler",
-  "main": "index.js",
+  "main": "src/zh-template-compiler.js",
   "scripts": {
-    "build": "pnpx pegjs -o zh-template-compiler.js src/zh-template-compiler.pegjs"
+    "build": "pnpm run gen:cjs && pnpm run gen:umd",
+    "mv": "mkdir dist && mv -f zh-template-compiler.cjs.js dist/ && mv -f zh-template-compiler.global.js dist/",
+    "gen:cjs": "pnpx pegjs -o zh-template-compiler.cjs.js src/zh-template-compiler.pegjs",
+    "gen:umd": "pnpx pegjs --format umd --export-var zhTemplateCompiler -o zh-template-compiler.global.js src/zh-template-compiler.pegjs"
   },
   "keywords": [],
   "author": "",
